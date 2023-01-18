@@ -15,16 +15,20 @@ export function HomePageFooter() {
                 <PrimaryLogo />
             </div>
             <div className={styles.footerSocial}>
-                <a href="https://www.linkedin.com/company/asalytics" target="_blank">
+                <a href="https://www.linkedin.com/company/asalytics" target="_blank" data-testid="linkedin-link">
                     <MemoLinkedinIcon fill="#808080" />
                 </a>
-                <a href="https://twitter.com/asalytics" target="_blank">
+                <a href="https://twitter.com/asalytics" target="_blank" data-testid="twitter-link">
                     <MemoTwitterIcon fill="#808080" />
                 </a>
-                <a href="https://github.com/asalytics" target="_blank">
+                <a href="https://github.com/asalytics" target="_blank" data-testid="github-link">
                     <MemoGithubIcon fill="#808080" />
                 </a>
-                <a href="https://www.youtube.com/channel/UCVuX5OldhBO-fZinZMk5tVA" target="_blank">
+                <a
+                    href="https://www.youtube.com/channel/UCVuX5OldhBO-fZinZMk5tVA"
+                    target="_blank"
+                    data-testid="youtube-link"
+                >
                     <MemoYoutubeIcon fill="#808080" />
                 </a>
             </div>

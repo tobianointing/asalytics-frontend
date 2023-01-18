@@ -14,7 +14,7 @@ describe("home page", () => {
     it("can select date range", () => {
         cy.get("[data-testid=primary-button]").should("have.length", 2).first().should("have.text", "ANALYZE ASAs");
         cy.get("[data-testid=primary-button]").first().click();
-        cy.contains("Algorand Standard Asset").should("exist");
+        cy.contains("Date Range").should("exist");
 
         cy.get("#date_input").click();
 
@@ -59,7 +59,7 @@ describe("home page", () => {
     it("can search for asa", () => {
         cy.get("[data-testid=primary-button]").should("have.length", 2).first().should("have.text", "ANALYZE ASAs");
         cy.get("[data-testid=primary-button]").first().click();
-        cy.contains("Algorand Standard Asset").should("exist");
+        cy.contains("Date Range").should("exist");
 
         cy.get("#asa_id").type("planet");
     });
@@ -67,10 +67,28 @@ describe("home page", () => {
     it("can close modal", () => {
         cy.get("[data-testid=primary-button]").should("have.length", 2).first().should("have.text", "ANALYZE ASAs");
         cy.get("[data-testid=primary-button]").first().click();
-        cy.contains("Algorand Standard Asset").should("exist");
+        cy.contains("Date Range").should("exist");
 
         cy.get("[data-testid=close-modal-btn]").click();
 
-        cy.contains("Algorand Standard Asset").should("not.exist");
+        cy.contains("Date Range").should("not.exist");
+    });
+
+    it.only("all social links are correct", () => {
+        // linkedin page
+        cy.get("[data-testid=linkedin-link]").should("have.attr", "href", "https://www.linkedin.com/company/asalytics");
+
+        // twitter page
+        cy.get("[data-testid=twitter-link]").should("have.attr", "href", "https://twitter.com/asalytics");
+
+        // github page
+        cy.get("[data-testid=github-link]").should("have.attr", "href", "https://github.com/asalytics");
+
+        // youtube page
+        cy.get("[data-testid=youtube-link]").should(
+            "have.attr",
+            "href",
+            "https://www.youtube.com/channel/UCVuX5OldhBO-fZinZMk5tVA",
+        );
     });
 });
