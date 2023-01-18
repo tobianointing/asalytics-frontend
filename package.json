@@ -10,7 +10,8 @@
         "format": "prettier --write .",
         "prepare": "husky install",
         "generate": "graphql-codegen",
-        "test": "jest --coverage"
+        "test": "jest --coverage",
+        "cypress:open": "npx cypress open"
     },
     "dependencies": {
         "@graphql-codegen/typescript": "^2.4.11",
@@ -63,6 +64,8 @@
         "@typescript-eslint/eslint-plugin": "^5.22.0",
         "@typescript-eslint/parser": "^5.22.0",
         "babel-jest": "^28.1.0",
+        "cypress": "^12.3.0",
+        "cypress-recurse": "^1.27.0",
         "eslint": "^8.15.0",
         "eslint-config-next": "12.1.6",
         "eslint-config-prettier": "^8.5.0",

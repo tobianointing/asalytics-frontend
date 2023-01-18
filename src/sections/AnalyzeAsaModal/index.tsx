@@ -101,6 +101,7 @@ export function AnalyzeAsaModal() {
             style={{
                 ...opacityAnimation,
             }}
+            data-testid="asa_modal"
         >
             <animated.div
                 className={styles.formContainer}
@@ -111,7 +112,7 @@ export function AnalyzeAsaModal() {
                 <div className={styles.modalHeader}>
                     <div className={styles.headerLogoContainer}></div>
 
-                    <div className={styles.headerCloseIcon} onClick={openAnalyzeModal}>
+                    <div className={styles.headerCloseIcon} onClick={openAnalyzeModal} data-testid="close-modal-btn">
                         <CloseIcon fill={theme?.theme ? "#ffffff" : ""} />
                     </div>
                 </div>
@@ -131,7 +132,7 @@ export function AnalyzeAsaModal() {
                     <PrimaryInput
                         placeholder="Select Date Range"
                         type="text"
-                        id="twitter_keyword"
+                        id="date_input"
                         disabled={false}
                         readonly={true}
                         name="twitter_keyword"
